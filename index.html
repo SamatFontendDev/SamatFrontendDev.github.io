@@ -8,6 +8,20 @@
 </head>
 <body>
     <button class="btn">fetch</button>
-    <script src="/script.js"></script>
+   <script>
+    document.querySelector('.btn').addEventListener('click', () => {
+    fetch('https://samatkhabibyllin1991.amocrm.ru/oauth2/access_token', {
+        method: 'post',
+        body: JSON.stringify({
+            client_id: "0ce90a40-de38-4688-8c45-9116d502e5f2",
+            client_secret: "T8zqCo5of5U9V91Zov29tuilW3LX27rhT3spG2DrH2z8QIixxsbU0mGQ4K1JKAMy",
+            grant_type: "authorization_code",
+            code: "def50200b72bd994fdc5d6ed2789675a27b53a226730097539d864aab314990af52c6e3d3ee5085cfc6fde1073d073b58a7cbe03355c91af1f9ca5c2848f54ceb42ca08f4ecb2b3197137a9068ec30ec20b7198410d8c9e6207bd6e129e656551832d34aa6fc5674af985bae65865a8de3ed7f0bcc296691c16a6baf7656e263f02f7502b6727acb8b5e3b8254de87d90403dcc1a6266abbea5da4a5db4dfc352195c0cef3ece908c474757b68fa5a3a425fc8e57759d1e3aaec9b923771e3e0d8ecafb388ece28fc5511d3bb725de2b5dac987fb2f791fe1067f283abdcc62e7ff4ace645af6ab25da1860bbad9db2cd642ef6571eddca127366f5387ff42c3a9acf2546857fb833ba1ffaeae976927318391ab1aaa116c48a7954670797029a10ccb82893bbd069e44bc2cc8dc7387dffb5c2b8d983988303def043a970de3bc8917a5af089c7e44d5266bd029ec13be4159c5e084b740dbbe85065c851bb59feecac488fab4afe38b2497e343df616ed71fa5bc4f3c437fecff9f9820f08422bad41eb5b94958499f3da2784219e2986c8f1b4a8b3819fa71ced01eef4f9e697811733975d83ef35e1839de64db409a9b76c477fe42444c0ad33c7feef5da9a2e6b1f6848345011abcf4825ec8924698fc0fbbd7eb586119210e3ee2b0abdc8753174d1614d82f8db2f9ec0a5a5a1081fa1382c89cc2055cc2ff4933d213d94bad03739027defc7e3d98cbb56d376",
+            redirect_uri: "https://samatfontenddev.github.io/SamatFrontendDev.github.io/"
+        }),
+        mode: 'no-cors'
+    }).then(res => res.json()).then(data => console.log(data))
+})
+   </script>
 </body>
 </html>
